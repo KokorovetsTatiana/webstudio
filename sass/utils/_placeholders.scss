@@ -1,0 +1,10 @@
+//transition-timing-function
+%transitionTF {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+//horizontal alignment
+%horAlign {
+  margin-left: auto;
+  margin-right: auto;
+}

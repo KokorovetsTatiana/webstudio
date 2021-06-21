@@ -1,0 +1,87 @@
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.clients-li {
+  display: flex;
+  width: 210px;
+  margin-bottom: 30px;
+}
+
+.clients-li:not(:nth-child(2n)) {
+  margin-right: 30px;
+}
+
+@media screen and (min-width: $mobile) {
+  .clients-li:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 90px;
+  @include bordered($clients-logo-color);
+
+  transition-property: border;
+  transition-duration: 250ms;
+  @extend %transitionTF;
+
+  &:hover,
+  &:focus {
+    @include bordered($accent-text-color);
+  }
+}
+
+.client-item {
+  transition-property: fill;
+  transition-duration: 250ms;
+  @extend %transitionTF;
+
+  .client-link:hover &,
+  .client-link:focus & {
+    fill: $accent-text-color;
+  }
+}
+
+.clients-logo {
+  width: 44px;
+  height: 49px;
+  fill: $clients-logo-color;
+}
+
+@media screen and (min-width: $tablet) {
+  .clients-li,
+  .client-link {
+    width: 226px;
+  }
+  .clients-li:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  .clients-li {
+    margin-right: 30px;
+  }
+  .clients-li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .clients-li,
+  .client-link {
+    width: 170px;
+  }
+  .clients-li {
+    margin-bottom: 0;
+  }
+
+  .clients-li:nth-child(3) {
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,94 @@
+.container {
+  @extend %horAlign;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: $mobile) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.current-page {
+  color: orange;
+  padding-bottom: 8px;
+}
+
+.current-page.site-nav-item::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 100%;
+  bottom: -6px;
+  left: 0;
+  border-radius: 2px;
+  background-color: $accent-text-color;
+  opacity: 1;
+  transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: $desktop) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .section-no-top-padding {
+    padding-top: 0px;
+    padding-bottom: 94px;
+  }
+}
+
+.button {
+  min-width: 200px;
+  height: 50px;
+  cursor: pointer;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+
+  font-family: Roboto;
+  font-style: normal;
+  @include fontChar(16px, 700, 1.87);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $primary-heading-color;
+  background-color: $button-filter-color;
+}
+
+.secondary-headings {
+  margin-bottom: 30px;
+  @include fontChar(36px, 700, 1.16);
+  text-align: center;
+  color: $secondary-heading-color;
+}
+@media screen and (min-width: $desktop) {
+  .secondary-headings {
+    margin-bottom: 50px;
+  }
+}

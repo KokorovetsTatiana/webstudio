@@ -1,0 +1,40 @@
+@media screen and (max-width: 1199px) {
+  .section-no-top-padding {
+    display: none;
+  }
+}
+
+.section-no-top-padding {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+.examples-list {
+  display: flex;
+  justify-content: center;
+}
+
+.examples-list-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.examples-list-description {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  @include fontChar(14px, 700, 1.14);
+  text-align: center;
+  bottom: 0;
+  text-transform: uppercase;
+  padding: 27px 0;
+
+  color: $primary-heading-color;
+}

@@ -1,0 +1,111 @@
+.examples-link {
+  display: block;
+  position: relative;
+
+  overflow: hidden;
+  transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.examples-item {
+  display: block;
+  justify-content: center;
+  margin-bottom: 30px;
+  outline: 1px solid #eeeeee;
+  outline-offset: -1px;
+  width: 100%;
+}
+
+.examples-item:last-child {
+  margin-bottom: 0;
+}
+.examples-photo {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: $tablet) {
+  .filter-examples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .examples-item {
+    width: 354px;
+  }
+  .examples-item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .examples-item {
+    width: 370px;
+  }
+  .examples-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+  .examples-item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .examples-item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.overflow {
+  position: relative;
+  overflow: hidden;
+}
+
+.examples-description {
+  position: absolute;
+  width: 100%;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  left: 0;
+
+  font-size: 18px;
+  line-height: 1.71;
+  text-align: left;
+
+  color: $primary-heading-color;
+
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+
+  .examples-link:hover &,
+  .examples-link:focus & {
+    transform: translateY(-100%);
+  }
+}
+
+.card-padding {
+  padding: 20px 24px;
+}
+
+.examples-heading {
+  margin-bottom: 4px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $secondary-heading-color;
+}
+
+.examples-filter {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  color: $main-text-color;
+}

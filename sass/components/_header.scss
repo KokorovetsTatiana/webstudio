@@ -1,0 +1,273 @@
+header .container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+  justify-content: space-between;
+}
+
+.logo {
+  @include fontChar(24px, 700, 1.17);
+  color: $secondary-heading-color;
+  font-family: "Raleway", sans-serif;
+}
+
+.logo > span {
+  color: $accent-text-color;
+}
+
+.logo .white-logo {
+  color: $primary-heading-color;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    fill: $button-filter-color;
+  }
+}
+
+.menu-container {
+  display: none;
+  z-index: 1;
+}
+
+.use-container {
+  padding: 12px 8px;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.header {
+  position: relative;
+}
+
+.menu-container.is-open {
+  display: block;
+  position: absolute;
+  top: 28%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: $primary-bg-color;
+  padding: 60px 135px;
+  text-align: center;
+  // @include fontChar(18px, 500, 1.17);
+  letter-spacing: 0.02em;
+}
+
+.navigation {
+  margin-bottom: 60px;
+  z-index: inherit;
+}
+
+.site-nav-item {
+  position: relative;
+
+  @include fontChar(18px, 500, 1.17);
+  letter-spacing: 0.02em;
+  color: $secondary-heading-color;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  @extend %transitionTF;
+}
+
+.contacts-item {
+  @include fontChar(18px, 500, 1.17);
+}
+
+.site-nav-li:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.site-nav-item:focus::after {
+  opacity: 1;
+}
+
+.site-nav-li:hover .site-nav-item::after {
+  opacity: 1;
+}
+
+.site-nav-item:hover,
+.site-nav-item:focus,
+.contacts-item:hover,
+.contacts-item:focus {
+  color: $accent-text-color;
+}
+
+.contacts-li:first-child {
+  margin-bottom: 16px;
+}
+
+.contacts-item {
+  color: $main-text-color;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  @extend %transitionTF;
+}
+
+.header-icon {
+  margin-right: 10px;
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+}
+
+.icon-tel {
+  width: 10px;
+  height: 15px;
+}
+
+.mail-icon {
+  fill: $main-text-color;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  @extend %transitionTF;
+
+  .contacts-item:hover &,
+  .contacts-item:focus & {
+    fill: $accent-text-color;
+  }
+}
+
+.tel-icon {
+  fill: $main-text-color;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  @extend %transitionTF;
+
+  .contacts-item:hover &,
+  .contacts-item:focus & {
+    fill: $accent-text-color;
+  }
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+@media screen and (min-width: $tablet) {
+  .menu-button {
+    display: none;
+  }
+  .menu-container,
+  .navigation,
+  .contacts {
+    display: flex;
+  }
+  .navigation {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  header .container {
+    padding: 16px 15px;
+  }
+  .current-page {
+    padding-bottom: 28px;
+  }
+  .navigation {
+    margin-right: 84px;
+  }
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+  .site-nav-item {
+    font-size: 14px;
+  }
+  .site-nav .site-nav-li {
+    margin-bottom: 0;
+  }
+  .site-nav-li:not(:last-child) {
+    margin-right: 50px;
+  }
+  .contacts {
+    display: block;
+    flex-wrap: wrap;
+  }
+  .contacts-li:first-child {
+    margin-bottom: 8px;
+  }
+  .contacts-item {
+    font-size: 12px;
+  }
+  .header-icon {
+    margin-right: 8px;
+  }
+  .icon-mail {
+    width: 14px;
+    height: 10px;
+  }
+  .icon-tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .contacts-li:first-child {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  header .container {
+    padding: 25px 25px;
+    justify-content: center;
+  }
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+
+  .logo-header {
+    margin-right: 93px;
+  }
+  .navigation {
+    margin-right: 284px;
+  }
+  .header-icon {
+    margin-right: 10px;
+  }
+  .logo {
+    @include fontChar(26px, 700, 1.19);
+  }
+  .contacts-item {
+    @include fontChar(14px, 500, 1.17);
+  }
+  .icon-mail {
+    width: 16px;
+    height: 12px;
+  }
+  .icon-tel {
+    height: 16px;
+  }
+  .contacts-item {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+  }
+}

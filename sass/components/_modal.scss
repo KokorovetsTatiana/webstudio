@@ -1,0 +1,218 @@
+.blocked-scroll {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.input-field:focus,
+.comment-field:focus {
+  outline: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // padding: 93px 15px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 400ms linear;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: $primary-bg-color;
+  padding: 40px;
+}
+
+.agreement {
+  font-size: 12px;
+  line-height: 1, 17;
+}
+
+// @media screen and (min-width: $tablet) {
+//   .backdrop {
+//     padding: 207px 159px;
+//   }
+// }
+
+@media screen and (min-width: $desktop) {
+  // .backdrop {
+  //   padding: 221px 536px;
+  // }
+  .modal {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .agreement {
+    font-size: 14px;
+    line-height: 1, 71;
+  }
+}
+
+.closing-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  @include bordered(rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  background: $primary-bg-color;
+  padding-top: 3px;
+
+  &:focus {
+    fill: $button-filter-color;
+  }
+}
+
+.cross {
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $button-filter-color;
+  }
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+
+  &-heading {
+    margin-bottom: 12px;
+
+    @include fontChar(20px, 700, 1.5);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $secondary-heading-color;
+  }
+
+  &-label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: $main-text-color;
+  }
+}
+
+.input-field {
+  height: 40px;
+  padding: 12px 42px;
+
+  @include bordered(rgba(33, 33, 33, 0.2));
+  border-radius: 4px;
+
+  transition: 250ms border cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
+
+  .input-field:focus + & {
+    fill: $button-filter-color;
+  }
+}
+
+.input-field:focus,
+.comment-field:focus {
+  @include bordered($button-filter-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.comment-field {
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  text-align: start;
+
+  resize: none;
+}
+
+.send-modal {
+  @extend %horAlign;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  @extend %horAlign;
+}
+
+.box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  margin-right: 9px;
+}
+
+.agreement-link {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+.form-icon {
+  position: absolute;
+  transform: translate(15px, 30px);
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  margin-right: 8px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .box:checked + & {
+    background-color: $button-filter-color;
+    background-image: url(../images/icons/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: transparent;
+  }
+
+  .box:focus + & {
+    border-color: $button-filter-color;
+  }
+}
+
+.modal-label {
+  display: flex;
+  align-items: center;
+}

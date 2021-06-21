@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/portfolio.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="logo logo-header" href="index.html"><span>Web</span>Studio</a>
+            <button class="menu-button" aria-expanded="false" aria-label="Переключатель мобильного меню"
+                data-menu-button>
+                <svg class="use-container" width="40px" height="40px">
+                    <use class="icon-cross" href="./images/icons/sprite.svg#cross"></use>
+                    <use class="icon-menu" href="./images/icons/sprite.svg#menu"></use>
+                </svg>
+            </button>
+            <div class="menu-container" data-menu>
+                <nav class="navigation">
+                    <ul class="site-nav">
+                        <li class="site-nav-li">
+                            <a class="site-nav-item" href="index.html">Студия</a>
+                        </li>
+                        <li class="site-nav-li">
+                            <a class="site-nav-item current-page" href="portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="site-nav-li">
+                            <a class="site-nav-item" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="contacts">
+                    <li class="contacts-li">
+                        <a class="contacts-item" href="mailto:info@devstudio.com">
+                            <svg class="header-icon icon-mail">
+                                <use class="mail-icon" href="./images/icons/sprite.svg#envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="contacts-li">
+                        <a class="contacts-item" href="tel:+380961111111">
+                            <svg class="header-icon icon-tel">
+                                <use class="tel-icon" href="./images/icons/sprite.svg#smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="hidden">Примеры наших работ</h1>
+                <div class="filter-container">
+                    <ul class="filter">
+                        <li class="button-flex">
+                            <button class="filter-button" type="button">Все</button>
+                        </li>
+                        <li class="button-flex">
+                            <button class="filter-button" type="button">Веб-сайты</button>
+                        </li>
+                        <li class="button-flex">
+                            <button class="filter-button" type="button">Приложения</button>
+                        </li>
+                        <li class="button-flex">
+                            <button class="filter-button" type="button">Дизайн</button>
+                        </li>
+                        <li class="button-flex">
+                            <button class="filter-button" type="button">Маркетинг</button>
+                        </li>
+                    </ul>
+                    <ul class="filter-examples">
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_1.jpg 1x,   
+                                                    ./images/portfolio/pf_1@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_1_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_1_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_1_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_1_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_1.jpg"
+                                            alt="Веб-сайт Технокряк" />
+                                    </picture>
+                                    <p class="examples-description">Технокряк это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
+                                        защищённые сервера конкурентов.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Технокряк</h3>
+                                    <p class="examples-filter">Веб-сайт</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_2.jpg 1x,   
+                                                    ./images/portfolio/pf_2@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_2_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_2_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_2_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_2_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_2.jpg"
+                                            alt="Постер с баскетболистами" />
+                                    </picture>
+                                    <p class="examples-description">Постер New Orlean vs Golden Star: спорт - это
+                                        здоровье!</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Постер New Orlean vs Golden Star</h3>
+                                    <p class="examples-filter">Дизайн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_3.jpg 1x,   
+                                                    ./images/portfolio/pf_3@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_3_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_3_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_3_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_3_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_3.jpg"
+                                            alt="Лого ресторана морской еды" />
+                                    </picture>
+                                    <p class="examples-description">Ресторан Seafood морская еда на любой вкус.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Ресторан Seafood</h3>
+                                    <p class="examples-filter">Приложение</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_4.jpg 1x,   
+                                                    ./images/portfolio/pf_4@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_4_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_4_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_4_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_4_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_4.jpg" alt="Наушники" />
+                                    </picture>
+                                    <p class="examples-description">Проект Prime это современная площадка
+                                        распространения коронавируса. Компании используют эту платформу для цифрового
+                                        шпионажа и атак на защищённые сервера конкурентов.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Проект Prime</h3>
+                                    <p class="examples-filter">Маркетинг</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_5.jpg 1x,   
+                                                    ./images/portfolio/pf_5@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_5_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_5_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_5_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_5_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_5.jpg" alt="Коробочки" />
+                                    </picture>
+                                    <p class="examples-description">Проект Boxes это современная площадка
+                                        распространения коронавируса. Компании используют эту платформу для цифрового
+                                        шпионажа и атак на защищённые сервера конкурентов.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Проект Boxes</h3>
+                                    <p class="examples-filter">Приложение</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_6.jpg 1x,   
+                                                    ./images/portfolio/pf_6@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_6_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_6_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_6_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_6_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_6.jpg"
+                                            alt="Веб-сайт Вдохновение" />
+                                    </picture>
+                                    <p class="examples-description">Inspiration has no Borders это современная площадка
+                                        распространения коронавируса. Компании используют эту платформу для цифрового
+                                        шпионажа и атак на защищённые сервера конкурентов.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Inspiration has no Borders</h3>
+                                    <p class="examples-filter">Веб-сайт</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_7.jpg 1x,   
+                                                    ./images/portfolio/pf_7@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_7_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_7_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_7_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_7_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_7.jpg"
+                                            alt="Глянцевый журнал" />
+                                    </picture>
+                                    <p class="examples-description">Издание Limited Edition это современная площадка
+                                        распространения коронавируса. Компании используют эту платформу для цифрового
+                                        шпионажа и атак на защищённые сервера конкурентов.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Издание Limited Edition</h3>
+                                    <p class="examples-filter">Дизайн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_8.jpg 1x,   
+                                                    ./images/portfolio/pf_8@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_8_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_8_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_8_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_8_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_8.jpg"
+                                            alt="Бирка проекта" />
+                                    </picture>
+                                    <p class="examples-description">Проект LAB это современная площадка распространения
+                                        коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на
+                                        защищённые сервера конкурентов.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Проект LAB</h3>
+                                    <p class="examples-filter">Маркетинг</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="examples-item">
+                            <a href="" class="examples-link">
+                                <div class="overflow">
+                                    <picture>
+                                        <source srcset="./images/portfolio/pf_9.jpg 1x,   
+                                                    ./images/portfolio/pf_9@2x.jpg 2x" media="(min-width: 1200px)" />
+                                        <source srcset="./images/portfolio/pf_9_tablet.jpg 1x,
+                                                    ./images/portfolio/pf_9_tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)" />
+                                        <source srcset="./images/portfolio/pf_9_mobile.jpg 1x,
+                                                    ./images/portfolio/pf_9_mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)" />
+                                        <img class="examples-photo" src="./images/portfolio/pf_9.jpg" alt="Ноутбук" />
+                                    </picture>
+                                    <p class="examples-description">Growing Business это современная площадка
+                                        распространения коронавируса. Компании используют эту платформу для цифрового
+                                        шпионажа и атак на защищённые сервера конкурентов.</p>
+                                </div>
+                                <div class="card-padding">
+                                    <h3 class="examples-heading">Growing Business</h3>
+                                    <p class="examples-filter">Приложение</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="section-footer">
+        <div class="container footer-columns">
+            <div class="footer-up">
+                <div class="footer-space">
+                    <a name="contacts" class="logo" href="index.html"><span>Web</span><span class="white-logo">Studio</span></a>
+                    <address class="address">
+                        <span class="address-text">г. Киев, пр-т Леси Украинки, 26</span>
+                        <ul class="contacts-footer">
+                            <li class="footer-item"><a class="contacts-footer-item"
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                            <li class="footer-item"><a class="contacts-footer-item" href="tel:+380961111111">+38 096 111
+                                    11 11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="our-links">
+                    <p class="join-us">ПРИСОЕДИНЯЙТЕСЬ</p>
+                    <ul class="join-us-footer">
+                        <li class="join-us-item">
+                            <a class="social-link-footer" href="">
+                                <svg class="social-icon-footer" width="20" height="20">
+                                    <use class="social-icon-item-footer" href="./images/icons/sprite.svg#instagram">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="join-us-item">
+                            <a class="social-link-footer" href="">
+                                <svg class="social-icon-footer" width="20" height="20">
+                                    <use class="social-icon-item-footer" href="./images/icons/sprite.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="join-us-item">
+                            <a class="social-link-footer" href="">
+                                <svg class="social-icon-footer" width="20" height="20">
+                                    <use class="social-icon-item-footer" href="./images/icons/sprite.svg#facebook">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="join-us-item">
+                            <a class="social-link-footer" href="">
+                                <svg class="social-icon-footer" width="20" height="20">
+                                    <use class="social-icon-item-footer" href="./images/icons/sprite.svg#linkedin">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <form class="footer-form">
+                    <p class="sign-up">ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ</p>
+                    <div class="footer-field">
+                        <input class="sign-email" type="email" name="email" placeholder="E-mail" />
+                        <button class="button submit" type="submit">
+                            <span class="submit-name">Подписаться</span>
+                            <svg class="send" width="24" height="24">
+                                <use class="" href="./images/icons/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/menu.js"></script>
+</body>
+
+</html>
