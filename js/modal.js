@@ -1,15 +1,16 @@
 (() => {
   const refs = {
-     openModalBtn: document.querySelector('[data-modal-open]'),
-     closeModalBtn: document.querySelector('[data-modal-close]'),
-     modal: document.querySelector('[data-modal]'),
-     body: document.querySelector('body'),
-    //  drawerOverLay: document.qwerySelector('[js-drawer-overlay]'),
-    //  drawer: document.qwerySelector('[js-drawer]'),
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
+    body: document.querySelector('body'),
+  
   };
  
   refs.openModalBtn.addEventListener('click', openModal);
   refs.closeModalBtn.addEventListener('click', closeModal);
+  refs.modal.addEventListener('click', closeModal);
+  window.addEventListener('keydown', onEscKeyPress);
   
   function openModal() {
     refs.modal.classList.remove('is-hidden');
@@ -21,14 +22,10 @@
      refs.body.classList.remove('blocked-scroll');
    }
  
-
-//  function toggleDrawer() {
-//    refs.drawer.classList.toggle('is-open');
-//    refs.drawerOvelay.classList.toggle('is-visible');
-
-//    const isDrawerOpen = refs.drawer.classList.contains('is-open');
-//    const method = isDraweropen ? 'disableBodyScroll' : 'enableBodyScroll';
-//    bodyScrollLock[method](refs.drawerOverLay);
-//  }
+  function onEscKeyPress(event) {
+    if (event.code === 'Escape') {
+      closeModal();
+    }
+  }
 
 })();

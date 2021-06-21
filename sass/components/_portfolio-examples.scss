@@ -37,7 +37,7 @@
   .filter-examples {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .examples-item {
     width: 354px;
@@ -49,17 +49,20 @@
 
 @media screen and (min-width: $desktop) {
   .examples-item {
-    width: 370px;
+    width: 350px;
   }
   .examples-item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+    margin-bottom: 2px;
   }
   .examples-item:nth-child(2n) {
     margin-right: 30px;
   }
   .examples-item:nth-child(3n) {
-    margin-right: 0;
+    margin-bottom: 2px;
   }
+  // .examples-item:nth-child(3n) {
+  //   margin-right: 0;
+  // }
 }
 
 .overflow {
